@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Random Video Redirect</title>
+  <script>
+    const videoLinks = [
+      "https://drive.google.com/file/d/15WyFLeuySR0Z9qA4WRilIp3087tmusEz/view?usp=sharing",
+      "https://drive.google.com/file/d/1BwmQiyyW9eZ8KILaoGvLFDMbIDNebKbi/view?usp=sharing",
+      "https://drive.google.com/file/d/1HRgo-nfDRrW_1ziMhjjJMvJnTQTmesW8/view?usp=sharing",
+      "https://drive.google.com/file/d/1IgvI7me_yqM_pY1rvx6sJVyRbKfU-iuj/view?usp=sharing", 
+      "https://drive.google.com/file/d/1LXPlbDX4LDn0JrxbfXtpB1RhRtHvzwHD/view?usp=sharing", 
+      "https://drive.google.com/file/d/1OHDNlqtxv0PND4HpGG67Ppl4gR2ewPfd/view?usp=sharing", 
+      "https://drive.google.com/file/d/1ShHdyliouOpF8fWMVcSdzcmE36LD5m_0/view?usp=sharing", 
+      "https://drive.google.com/file/d/1d2E9WzyuePIeosRpma1FyE6_V48zF7pK/view?usp=sharing",
+      "https://drive.google.com/file/d/1eO5L-_7tJ6ympaXT9cBTOdrjEucFuA5U/view?usp=sharing",
+      "https://drive.google.com/file/d/1loYbvl2I-PiBXR1XXnkS-G3o6nNW5-od/view?usp=sharing",
+      "https://drive.google.com/file/d/1muenDJGwYFEDXeJon9t7RzCuXWPST4Le/view?usp=sharing", 
+      "https://drive.google.com/file/d/1tL6W7PBopX2Vu3xY16tYkHfr0pqZu_3V/view?usp=sharing",
+      "https://drive.google.com/file/d/129si9OAoLZH7BYlm9I2wjheN4gr0FQJw/view?usp=sharing", 
+      "https://drive.google.com/file/d/1DDnOXV54tzT1GR1q4rdIp8OoW9kV_dii/view?usp=sharing", 
+      "https://drive.google.com/file/d/1FgD6CUXCXX5a8R941Eh0HeUoWW0ZyPxB/view?usp=sharing", 
+      "https://drive.google.com/file/d/1V3hc1d-K3Ezocx2n_wEvguz_wk1PZaR5/view?usp=sharing", 
+      "https://drive.google.com/file/d/1kOmKM2FlTRAVwheoqWw8qJIL57LjWzoA/view?usp=sharing", 
+      "https://drive.google.com/file/d/1pgjGue00S3FK2onxyBY9Rv4Z21EulMCX/view?usp=sharing", 
+      "https://drive.google.com/file/d/1qRBvU3jtjcWXppmyGLPTxXBuaUh6Yu_w/view?usp=sharing", 
+      "https://drive.google.com/file/d/1tN8A-opJG7IDMPXHS7dXX7fj-ZpdGD2E/view?usp=sharing", 
+      "https://drive.google.com/file/d/1w-AYKCicc5HGzxEIow7e947VK_JU37me/view?usp=sharing",
+      "https://drive.google.com/file/d/1GxtAjc2jyEER5V7JVV7Pw8DHK2qZb0mT/view?usp=sharing",
+      "https://drive.google.com/file/d/13agGDNKxV2FSrCdUZd46PnTp22Uc-M6-/view?usp=sharing",
+      "https://drive.google.com/file/d/1PHv5vkMDx9AZn7Dl_valqyHPlH1bo7rM/view?usp=sharing",
+      "https://drive.google.com/file/d/1v1yWma6fFCcT7donJX-qqWvhk5bgXKGX/view?usp=sharing"
+
+
+    ];
+
+    window.onload = function () {
+      const randomIndex = Math.floor(Math.random() * videoLinks.length);
+      const chosenLink = videoLinks[randomIndex];
+
+      // Set the manual link just in case redirect fails
+      document.getElementById("manualLink").href = chosenLink;
+
+      // Wait briefly before redirecting (helps prevent browser warnings)
+      setTimeout(() => {
+        window.location.href = chosenLink;
+      }, 500);
+    };
+  </script>
+</head>
+<body>
+  <p>Redirecting you to a random video...</p>
+  <p>If nothing happens, <a id="manualLink" href="#">click here</a>.</p>
+</body>
+</html>
